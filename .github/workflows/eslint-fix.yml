@@ -2,15 +2,14 @@ name: "build"
 on: pull_request
 
 jobs:
-  test: # make sure the action works on a clean machine without building
+  test:
     runs-on: ubuntu-latest
 
     steps:
-      # Setup node
       - uses: actions/checkout@v3
       - uses: actions/setup-node@v3
         with:
-          node-version: lts/-1
+          node-version-file: ".nvmrc"
 
       - name: Install dependencies
         run: |
