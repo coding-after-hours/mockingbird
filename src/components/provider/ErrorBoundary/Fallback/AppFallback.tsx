@@ -11,9 +11,9 @@ type ErrorFallbackProps = {
 export const AppFallback: FC<ErrorFallbackProps> = ({ error }) => {
   return (
     <div role="alert">
-      <p>エラーが発生しました。</p>
+      <p>An error has occurred:</p>
       <p>{error.message}</p>
-      <button onClick={onReload}>再読み込み</button>
+      <button onClick={onReload}>Reload</button>
     </div>
   );
 };

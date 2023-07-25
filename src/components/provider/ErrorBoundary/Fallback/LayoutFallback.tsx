@@ -18,9 +18,9 @@ export const LayoutFallback: FC<ErrorFallbackProps> = ({ error }) => {
 
   return (
     <div role="alert">
-      <p>エラーが発生しました。</p>
+      <p>An error has ocurred:</p>
       <p>{error.message}</p>
-      <button onClick={onGoBack}>戻る</button>
+      <button onClick={onGoBack}>Go back</button>
     </div>
   );
 };
