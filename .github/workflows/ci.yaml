@@ -1,0 +1,27 @@
+name: ci
+
+on:
+  pull_request:
+    branches: main
+  push:
+    branches: main
+
+jobs:
+  ci:
+    timeout-minutes: 30
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version-file: .nvmrc
+
+      - name: Install dependencies
+        run: npm clean-install
+
+      - name: ESLint
+        run: npm run lint:eslint
+
+      - name: TSC & Vite build
+        run: npm run build
