@@ -2,8 +2,5 @@
 	"editor.defaultFormatter": "esbenp.prettier-vscode",
 	"prettier.enable": true,
 	"eslint.enable": true,
-	"cSpell.words": [
-		"Vite",
-		"vitest"
-	]
+	"cSpell.words": ["Vite", "vitest"]
 }
