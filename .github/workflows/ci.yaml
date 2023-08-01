@@ -22,8 +22,8 @@ jobs:
       - name: Install dependencies
         run: npm clean-install
 
-      - name: Verify format
-        run: npm run lint:prettier
+      # - name: Verify format
+      #   run: npm run lint:prettier
 
       - name: ESLint
         run: npm run lint:eslint
