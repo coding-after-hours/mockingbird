@@ -8,8 +8,8 @@ import { authService } from "~/services/auth.service";
 const { useAuth } = authService;
 
 export const AppRoutes = () => {
-  const isSignIn = useAuth();
-  const routes = isSignIn ? privateRoutes : publicRoutes;
-  const element = useRoutes([...routes, ...commonRoutes]);
-  return <>{element}</>;
+	const isSignIn = useAuth();
+	const routes = isSignIn ? privateRoutes : publicRoutes;
+	const element = useRoutes([...routes, ...commonRoutes]);
+	return <>{element}</>;
 };

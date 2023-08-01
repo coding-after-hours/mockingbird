@@ -8,21 +8,21 @@ import { ReactQueryProvider } from "~/providers/ReactQueryProvider";
 import { ReactRouterProvider } from "~/providers/ReactRouterProvider";
 
 type Props = {
-  children: ReactNode;
+	children: ReactNode;
 };
 
 export const AppProvider: FC<Props> = ({ children }) => {
-  return (
-    <ErrorBoundary FallbackComponent={AppFallback}>
-      <Suspense>
-        <ReactHelmetProvider>
-          <ReactQueryProvider>
-            <ReactRouterProvider>
-              <>{children}</>
-            </ReactRouterProvider>
-          </ReactQueryProvider>
-        </ReactHelmetProvider>
-      </Suspense>
-    </ErrorBoundary>
-  );
+	return (
+		<ErrorBoundary FallbackComponent={AppFallback}>
+			<Suspense>
+				<ReactHelmetProvider>
+					<ReactQueryProvider>
+						<ReactRouterProvider>
+							<>{children}</>
+						</ReactRouterProvider>
+					</ReactQueryProvider>
+				</ReactHelmetProvider>
+			</Suspense>
+		</ErrorBoundary>
+	);
 };
