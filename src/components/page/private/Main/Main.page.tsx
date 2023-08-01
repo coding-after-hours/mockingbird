@@ -2,5 +2,5 @@
  * @package
  */
 export const Main = () => {
-  return <div>main</div>;
+	return <div>main</div>;
 };

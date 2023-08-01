@@ -3,26 +3,26 @@ import { QueryClient, QueryClientProvider } from "react-query";
 import { ReactQueryDevtools } from "react-query/devtools";
 
 type Props = {
-  children: ReactNode;
+	children: ReactNode;
 };
 
 const queryClient = new QueryClient({
-  defaultOptions: {
-    queries: {
-      suspense: true,
-      useErrorBoundary: true,
-    },
-  },
+	defaultOptions: {
+		queries: {
+			suspense: true,
+			useErrorBoundary: true,
+		},
+	},
 });
 
 /**
  * @package
  */
 export const ReactQueryProvider: FC<Props> = ({ children }) => {
-  return (
-    <QueryClientProvider client={queryClient}>
-      {children}
-      <ReactQueryDevtools initialIsOpen={false} />
-    </QueryClientProvider>
-  );
+	return (
+		<QueryClientProvider client={queryClient}>
+			{children}
+			<ReactQueryDevtools initialIsOpen={false} />
+		</QueryClientProvider>
+	);
 };

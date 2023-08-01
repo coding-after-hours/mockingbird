@@ -11,32 +11,32 @@ const NestPostsPage = lazy(() => import("~/components/page/public/NestPosts"));
 const PostDetailPage = lazy(() => import("~/components/page/public/PostDetail"));
 
 export const publicRoutes = [
-  {
-    path: "",
-    element: <PublicLayout />,
-    children: [
-      {
-        path: "about",
-        element: <AboutPage />,
-      },
-      {
-        path: "posts",
-        element: <PostsPage />,
-      },
-      {
-        path: "posts/:postId",
-        element: <PostDetailPage />,
-      },
-      {
-        path: "nest-one",
-        element: <NestOnePage />,
-        children: [...nestOneRoutes],
-      },
-      {
-        path: "nest-posts",
-        element: <NestPostsPage />,
-        children: [...nestPostsRoutes],
-      },
-    ],
-  },
+	{
+		path: "",
+		element: <PublicLayout />,
+		children: [
+			{
+				path: "about",
+				element: <AboutPage />,
+			},
+			{
+				path: "posts",
+				element: <PostsPage />,
+			},
+			{
+				path: "posts/:postId",
+				element: <PostDetailPage />,
+			},
+			{
+				path: "nest-one",
+				element: <NestOnePage />,
+				children: [...nestOneRoutes],
+			},
+			{
+				path: "nest-posts",
+				element: <NestPostsPage />,
+				children: [...nestPostsRoutes],
+			},
+		],
+	},
 ];
