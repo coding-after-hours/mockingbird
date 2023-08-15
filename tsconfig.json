@@ -6,9 +6,13 @@
 		"allowJs": false,
 		"skipLibCheck": true,
 		"esModuleInterop": false,
+		"exactOptionalPropertyTypes": true,
 		"allowSyntheticDefaultImports": true,
 		"strict": true,
 		"forceConsistentCasingInFileNames": true,
+		"noUncheckedIndexedAccess": true,
+		"noFallthroughCasesInSwitch": true,
+		"noImplicitReturns": true,
 		"module": "esnext",
 		"moduleResolution": "node",
 		"resolveJsonModule": true,
@@ -22,7 +26,11 @@
 			"~/*": ["./src/*"]
 		}
 	},
-	"references": [{ "path": "./tsconfig.node.json" }],
+	"references": [
+		{
+			"path": "./tsconfig.node.json"
+		}
+	],
 	"include": ["src/**/*.ts", "src/**/*.tsx", "./.eslintrc.js", "./vite.config.ts", "./playwright.config.ts"],
 	"exclude": ["node_modules"]
 }

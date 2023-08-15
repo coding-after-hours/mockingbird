@@ -10,17 +10,9 @@ type ErrorFallbackProps = {
 
 type ErrorBoundaryProps = {
 	children: ReactNode;
-	onReset?: () => void;
 	FallbackComponent?: FC<ErrorFallbackProps>;
 };
 
-export const ErrorBoundary: FC<ErrorBoundaryProps> = ({ children, onReset, FallbackComponent }) => {
-	return (
-		<ReactErrorBoundary
-			FallbackComponent={FallbackComponent || LayoutFallback}
-			onReset={onReset}
-		>
-			{children}
-		</ReactErrorBoundary>
-	);
+export const ErrorBoundary: FC<ErrorBoundaryProps> = ({ children, FallbackComponent }) => {
+	return <ReactErrorBoundary FallbackComponent={FallbackComponent || LayoutFallback}>{children}</ReactErrorBoundary>;
 };
