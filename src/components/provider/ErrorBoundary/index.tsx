@@ -14,11 +14,5 @@ type ErrorBoundaryProps = {
 };
 
 export const ErrorBoundary: FC<ErrorBoundaryProps> = ({ children, FallbackComponent }) => {
-	return (
-		<ReactErrorBoundary
-			FallbackComponent={FallbackComponent || LayoutFallback}
-		>
-			{children}
-		</ReactErrorBoundary>
-	);
+	return <ReactErrorBoundary FallbackComponent={FallbackComponent || LayoutFallback}>{children}</ReactErrorBoundary>;
 };
