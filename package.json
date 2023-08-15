@@ -9,6 +9,7 @@
     "fix:prettier": "prettier --write .",
     "lint:eslint": "eslint --cache ./src",
     "lint:prettier": "prettier --check .",
+    "lint:typescript": "tsc --noEmit",
     "test": "npx vitest --run",
     "test:run": "npx vitest --run",
     "test:watch": "npx vitest",
