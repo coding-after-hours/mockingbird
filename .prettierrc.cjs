@@ -9,4 +9,5 @@ module.exports = {
 	semi: true,
 	trailingComma: "es5",
 	singleAttributePerLine: true,
+	plugins: ["prettier-plugin-tailwindcss"],
 };
