@@ -1,7 +1,7 @@
 import { Link } from "~/components/lib/router/Link";
 import { Outlet } from "~/components/lib/router/Outlet";
 import { Suspense } from "~/components/provider/Suspense";
-import { errorButton, successButton } from "~/constants/buttonColor";
+import { successButton } from "~/constants/buttonColor";
 
 export const PublicLayout = () => {
 	return (
@@ -14,34 +14,10 @@ export const PublicLayout = () => {
 					to /
 				</Link>
 				<Link
-					to="/nest-one"
+					to="/sign-up"
 					className={successButton}
 				>
-					to /nest-one
-				</Link>
-				<Link
-					to="/about"
-					className={successButton}
-				>
-					to /about
-				</Link>
-				<Link
-					to="/posts"
-					className={successButton}
-				>
-					to /posts
-				</Link>
-				<Link
-					to="/nest-posts"
-					className={successButton}
-				>
-					to /nest-posts
-				</Link>
-				<Link
-					to="/not-found"
-					className={errorButton}
-				>
-					to /not-found
+					to /sign-up
 				</Link>
 			</div>
 
